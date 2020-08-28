@@ -10,9 +10,28 @@ const Header = () => {
             <img className="logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt='Logo'></img>
         </Link>
         <div className='header-search'>
-            <input name="search-bar" className="search-bar"></input>
+            <input name="search-bar" className="search-bar" placeholder='search for items'></input>
             <SearchIcon className='search-icon'></SearchIcon>
         </div>
+
+        <Link to='/login' className='header-link'>
+            <div className='header-link-options'>
+            <span>Hello,</span>
+            <span>Sign In</span>
+            </div>
+        </Link>
+        <Link to='/orders' className='header-link'>
+        <div className='header-link-options'>
+            <span>Returns</span>
+            <span>& Orders</span>
+            </div>
+        </Link>
+        <Link to='/prime' className='header-link'>
+        <div className='header-link-options'>
+            <span>Your</span>
+            <span>Prime</span>
+            </div>
+        </Link>
 
     </nav>
 }
