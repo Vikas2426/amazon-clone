@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/amazon-clone' exact component={Home} />
           <Route path='/checkout' component={Checkout} />
           <Route path='/login' component={Login} />
         </Switch>
