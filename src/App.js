@@ -5,19 +5,18 @@ import Checkout from './components/Checkout';
 import Home from './components/Home.js';
 
 function App() {
- 
+
 
   return (
-    <Router>
-      <div className="App">
-  
+    <div className="App">
+      <Router>
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/checkout' component={Checkout} />
           <Route path='/login' component={Login} />
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </div>
 
   );
 }
