@@ -1,9 +1,10 @@
 import React from 'react';
-
+import Header from './Header.js';
 const Checkout = () => {
-    return <nav>
+    return <div className="checkout">
+        <Header />
         <h1>Checkout</h1>
-    </nav>
+    </div>
 }
 
 export default Checkout;

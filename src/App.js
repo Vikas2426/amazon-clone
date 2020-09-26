@@ -1,20 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './Header';
-import Login from './Login';
-import Checkout from './Checkout';
+import Login from './components/Login';
+import Checkout from './components/Checkout';
+import Home from './components/Home.js';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+
         <Switch>
-          <Route path='/' exact>
-            <h1>Amazon Clone</h1>
-          </Route>
-          <Route path='/checkout' component={Checkout}></Route>
-          <Route path='/login' component={Login}></Route>
+          <Route path='/' exact component={Home} />
+          <Route path='/checkout' component={Checkout} />
+          <Route path='/login' component={Login} />
         </Switch>
       </div>
     </Router>
