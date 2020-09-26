@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/amazonclone/static/css/main.c6ae30d3.chunk.css",
-    "main.js": "/amazonclone/static/js/main.12e8454a.chunk.js",
-    "main.js.map": "/amazonclone/static/js/main.12e8454a.chunk.js.map",
-    "runtime-main.js": "/amazonclone/static/js/runtime-main.74fb3547.js",
-    "runtime-main.js.map": "/amazonclone/static/js/runtime-main.74fb3547.js.map",
-    "static/js/2.2faebba5.chunk.js": "/amazonclone/static/js/2.2faebba5.chunk.js",
-    "static/js/2.2faebba5.chunk.js.map": "/amazonclone/static/js/2.2faebba5.chunk.js.map",
-    "index.html": "/amazonclone/index.html",
-    "precache-manifest.3653b1f4994a284f591d34f8c5d6d053.js": "/amazonclone/precache-manifest.3653b1f4994a284f591d34f8c5d6d053.js",
-    "service-worker.js": "/amazonclone/service-worker.js",
-    "static/css/main.c6ae30d3.chunk.css.map": "/amazonclone/static/css/main.c6ae30d3.chunk.css.map",
-    "static/js/2.2faebba5.chunk.js.LICENSE.txt": "/amazonclone/static/js/2.2faebba5.chunk.js.LICENSE.txt",
-    "static/media/banner-image-min.jpg": "/amazonclone/static/media/banner-image-min.9e3bd55a.jpg"
+    "main.css": "/amazon-clone/static/css/main.c6ae30d3.chunk.css",
+    "main.js": "/amazon-clone/static/js/main.12e8454a.chunk.js",
+    "main.js.map": "/amazon-clone/static/js/main.12e8454a.chunk.js.map",
+    "runtime-main.js": "/amazon-clone/static/js/runtime-main.1cf4aa72.js",
+    "runtime-main.js.map": "/amazon-clone/static/js/runtime-main.1cf4aa72.js.map",
+    "static/js/2.2faebba5.chunk.js": "/amazon-clone/static/js/2.2faebba5.chunk.js",
+    "static/js/2.2faebba5.chunk.js.map": "/amazon-clone/static/js/2.2faebba5.chunk.js.map",
+    "index.html": "/amazon-clone/index.html",
+    "precache-manifest.87247358ad8fffe2ad0398a69965c84b.js": "/amazon-clone/precache-manifest.87247358ad8fffe2ad0398a69965c84b.js",
+    "service-worker.js": "/amazon-clone/service-worker.js",
+    "static/css/main.c6ae30d3.chunk.css.map": "/amazon-clone/static/css/main.c6ae30d3.chunk.css.map",
+    "static/js/2.2faebba5.chunk.js.LICENSE.txt": "/amazon-clone/static/js/2.2faebba5.chunk.js.LICENSE.txt",
+    "static/media/banner-image-min.jpg": "/amazon-clone/static/media/banner-image-min.9e3bd55a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.74fb3547.js",
+    "static/js/runtime-main.1cf4aa72.js",
     "static/js/2.2faebba5.chunk.js",
     "static/css/main.c6ae30d3.chunk.css",
     "static/js/main.12e8454a.chunk.js"
