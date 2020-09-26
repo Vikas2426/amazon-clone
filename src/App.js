@@ -5,10 +5,12 @@ import Checkout from './components/Checkout';
 import Home from './components/Home.js';
 
 function App() {
+ 
+
   return (
     <Router>
       <div className="App">
-
+  
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/checkout' component={Checkout} />

@@ -1,0 +1,39 @@
+.side-drawer {
+  height: 100vh;
+  background-color: #131921;
+  width: 60vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.drawer-close-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  background: transparent;
+  color: white;
+  border: 0;
+  font-size: 2.5em;
+  cursor: pointer;
+  margin: 10px 10px -10px auto;
+}
+
+.side-drawer .header-links .nav-link-options {
+  display: block;
+  border-bottom: 1px solid white;
+}
+
+.side-drawer .header-links .nav-link-options > span {
+  font-size: 1em;
+  margin: 2px;
+}
+
+.nav-link:hover {
+  border: 0;
+}
