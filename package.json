@@ -1,7 +1,7 @@
 {
   "name": "amazon-clone",
   "version": "0.1.0",
-  "homepage": "http://vikas2426.github.io/amazon-clone/",
+  "homepage": "https://vikas2426.github.io/amazon-clone/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
