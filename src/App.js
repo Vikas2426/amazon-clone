@@ -9,10 +9,10 @@ function App() {
 
   return (
 
-    <Router>
+    <Router basename='/amazon-clone'>
       <div className="App">
         <Switch>
-          <Route path='/amazon-clone' exact component={Home} />
+          <Route path='/' exact component={Home} />
           <Route path='/checkout' component={Checkout} />
           <Route path='/login' component={Login} />
         </Switch>
