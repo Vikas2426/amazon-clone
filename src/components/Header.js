@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import HeaderLinks from './HeaderLinks.js';
@@ -9,15 +9,15 @@ import SideDrawer from './SideDrawer.js'
 
 const Header = () => {
     const [sideDrawerIsOpen, setSideDrawerIsOpen] = useState(false);
-    const handleDrawerButtonClick=()=>{
+    const handleDrawerButtonClick = () => {
         setSideDrawerIsOpen(prevState => !prevState);
-          }
+    }
 
     return <nav className='nav header'>
         <div className='drawer-btn-container'>
-            <DrawerButton btnClick={handleDrawerButtonClick}/>
+            <DrawerButton btnClick={handleDrawerButtonClick} />
         </div>
-        {sideDrawerIsOpen && <SideDrawer btnClick={handleDrawerButtonClick}/> }
+        {sideDrawerIsOpen && <SideDrawer btnClick={handleDrawerButtonClick} />}
         {/* Amazon Logo */}
         <Link to='/'>
             <div className="logo-container">
