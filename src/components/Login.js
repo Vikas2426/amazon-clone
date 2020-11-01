@@ -35,7 +35,7 @@ class Login extends Component {
                     <input type='password' name='password' required placeholder='Password' onChange={this.handleChange}></input>
                 </form>
 
-                <button className='btn' type='submit' name='login' onClick={this.handleClick}>Login In</button>
+                <button className='btn' type='submit' name='login' onClick={this.handleClick}>Log In</button>
                 <button className='google btn' onClick={signInWithGoogle}>Sign in with Google</button>
 
             </div>
