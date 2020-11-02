@@ -1,57 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './Login.css';
-import { signInWithGoogle, signInWithEmail, createUserWithEmail } from '../firebase/firebase.utils.js';
+import { signInWithEmail, createUserWithEmail } from '../firebase/firebase.utils.js';
+import { Link } from 'react-router-dom';
+import LoginCard from './LoginCard.js';
+import SignInCard from './SignInCard.js';
 
+function Login() {
 
-class Login extends Component {
-    state = {
-        email: "",
-        password: ""
-    }
-    handleChange = event => {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-    }
-    handleClick = event => {
-        event.preventDefault();
-        console.log(event.target.name);
-        event.target.name === "login" ?
-            signInWithEmail(this.state.email, this.state.password)
-            : createUserWithEmail(this.state.email, this.state.password);
+    const [login, toggleLogin] = useState(true);
 
+    function handleClick() {
+        toggleLogin(!login);
     }
 
     // handleSignIn = event => {
     //     event.preventDefault();
     //     createUserWithEmail(this.state.email, this.state.password);
     // }
-    render() {
-        return (<div className="login-page">
-            <div className='login-card'>
-                <p>Login</p>
-                <form>
-                    <input type='email' name='email' required placeholder='Email' onChange={this.handleChange}></input>
-                    <input type='password' name='password' required placeholder='Password' onChange={this.handleChange}></input>
-                </form>
 
-                <button className='btn' type='submit' name='login' onClick={this.handleClick}>Login In</button>
-                <button className='google btn' onClick={signInWithGoogle}>Sign in with Google</button>
-
-            </div>
-            <div className='login-card'>
-                <p>Sign Up</p>
-                <form>
-                    <input type='email' name='email' required placeholder='Email' onChange={this.handleChange}></input>
-                    <input type='password' name='password' required placeholder='Password' onChange={this.handleChange}></input>
-                </form>
-
-                <button className='btn' type='submit' name='signup' onClick={this.handleClick}>Sign In</button>
-
+    return (
+        <div id='login-page-container'>
+            <Link to='/'>
+                <div className="logo-container">
+                    <img className="logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt='Logo'></img>
+                </div>
+            </Link>
+            <div className="login-page">
+                {login ? <LoginCard toggle={handleClick} /> : <SignInCard toggle={handleClick} />}
 
             </div>
         </div>)
-    }
+
 }
 
 

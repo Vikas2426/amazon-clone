@@ -23,7 +23,6 @@ const Header = () => {
             <div className="logo-container">
                 <img className="logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt='Logo'></img>
             </div>
-
         </Link>
 
         {/* Search Bar  */}
