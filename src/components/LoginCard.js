@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { signInWithGoogle, signInWithEmail } from '../firebase/firebase.utils.js';
 
 
@@ -7,7 +7,7 @@ export default function LoginCard({ toggle }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const handleChange = event => {
-        if (event.target.name == "email") {
+        if (event.target.name === "email") {
             setEmail(event.target.value);
         }
         else {

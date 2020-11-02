@@ -11,9 +11,9 @@ function Home() {
             <img id='banner-img' src={require('../assets/banner-image-min.jpg')} alt='banner' />
             <div className='products-container'>
                 <div className='products'>
-                   { 
-                    productList.map(products =>
-                    <ProductCard title={products.title} url={products.url} name={products.name} />)}
+                    {
+                        productList.map((products, index) =>
+                            <ProductCard key={index} title={products.title} url={products.url} name={products.name} />)}
                 </div>
             </div>
 

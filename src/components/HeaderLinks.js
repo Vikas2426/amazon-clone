@@ -1,18 +1,28 @@
 import React from 'react';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../firebase/firebase.utils.js';
 
 
-export default function HeaderLinks(){
-    return(
+export default function HeaderLinks() {
+
+    const [user] = useAuthState(auth);
+    return (
         <div className='header-links'>
             {/* Login  */}
-            <Link to='/login' className='nav-link'>
+
+            {user ?
                 <div className='nav-link-options'>
-                    <span className='nav-link-option-top'>Hello,</span>
-                    <span className='nav-link-option-bottom'>Sign In</span>
+                    <span className='nav-link-option-bottom' onClick={() => auth.signOut()}>Sign Out</span>
                 </div>
-            </Link>
+                :
+                <Link to='/login' className='nav-link'>
+                    <div className='nav-link-options'>
+                        <span className='nav-link-option-top'>Hello,</span>
+                        <span className='nav-link-option-bottom'>Sign In</span>
+                    </div>
+                </Link>}
 
             {/* Orders */}
             <Link to='/orders' className='nav-link'>

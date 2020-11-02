@@ -7,7 +7,7 @@ export default function SignInCard({ toggle }) {
     const [password, setPassword] = useState("");
 
     const handleChange = event => {
-        if (event.target.name == "email") {
+        if (event.target.name === "email") {
             setEmail(event.target.value);
         }
         else {

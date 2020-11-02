@@ -6,25 +6,25 @@ const ProductCard = (props) => {
         <h3 className='title'>{props.title}</h3>
         <div className='img-container'>
             <div className='product-details'>
-                <img className='product-img' src={props.url[0]}></img>
-<p className='product-name'>{props.name[0]}</p>
+                <img className='product-img' src={props.url[0]} alt='product'></img>
+                <p className='product-name'>{props.name[0]}</p>
             </div>
             <div className='product-details'>
-                <img className='product-img' src={props.url[1]}></img>
+                <img className='product-img' src={props.url[1]} alt='product'></img>
                 <p className='product-name'>{props.name[1]}</p>
             </div>
         </div>
         <div className='img-container'>
             <div className='product-details'>
-                <img className='product-img' src={props.url[2]}></img>
+                <img className='product-img' src={props.url[2]} alt='product'></img>
                 <p className='product-name'>{props.name[2]}</p>
             </div>
             <div className='product-details'>
-                <img className='product-img' src={props.url[3]}></img>
+                <img className='product-img' src={props.url[3]} alt='product'></img>
                 <p className='product-name'>{props.name[3]}</p>
             </div>
         </div>
-        <a className='see-more-link' href="#">See more</a>
+        <a className='see-more-link' href="/">See more</a>
 
     </div>
 }
