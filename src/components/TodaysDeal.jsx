@@ -18,10 +18,10 @@ function TodaysDeal() {
     return (
         <div className='deals-container'>
             <div className="scroller left-scroller" onClick={scrollLeft}> &#60; </div>
-
             <div className="deals-carousel">
                 Today's Deals
-                    <ul className="deal-products-container" ref={listRef}>
+
+                <ul className="deal-products-container" ref={listRef}>
 
                     {list.map(item => <li className="deal-product" key={item.imgUrl}>
 
