@@ -2,6 +2,7 @@
   width: 100vw;
   height: 40vh;
   padding: 2em;
+  position: relative;
 }
 .deals-carousel {
   padding: 1.5em 1em;
@@ -13,6 +14,29 @@
 ul {
   display: flex;
   overflow-x: scroll;
+}
+
+.scroller {
+  position: absolute;
+  top: 60%;
+  cursor: pointer;
+  width: 35px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  color: rgb(32, 32, 32);
+}
+
+.left-scroller {
+  left: 32px;
+}
+
+.right-scroller {
+  right: 32px;
 }
 
 li {
