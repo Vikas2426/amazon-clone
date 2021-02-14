@@ -32,15 +32,7 @@ export default function HeaderLinks() {
                 </div>
             </Link>
 
-            {/* Prime */}
-            <Link to='/prime' className='nav-link'>
-                <div className='nav-link-options'>
-                    <span className='nav-link-option-top'>Your</span>
-                    <span className='nav-link-option-bottom'>Prime</span>
-                </div>
-            </Link>
-
-            {/* Cart & Counter */}
+                    {/* Cart & Counter */}
             <Link to='/cart' className='nav-link'>
                 <div className='nav-link-cart'>
                     <ShoppingCartIcon ></ShoppingCartIcon>

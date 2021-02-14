@@ -27,7 +27,7 @@ const Header = () => {
 
         {/* Search Bar  */}
         <div className='nav-search'>
-            <input name="search-bar" className="search-bar" placeholder='search for items'></input>
+            <input name="search-bar" className="search-bar" ></input>
             <SearchIcon className='search-icon'></SearchIcon>
         </div>
 

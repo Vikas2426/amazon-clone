@@ -3,12 +3,13 @@ import Header from './Header.js';
 import ProductCard from './ProductCard.js';
 import productList from '../assets/productList.js';
 import './Home.css'
+import TodaysDeal from './TodaysDeal.jsx';
 
 function Home() {
     return (
         <div className="Home">
             <Header />
-            <img id='banner-img' src={require('../assets/banner-image-min.jpg')} alt='banner' />
+            <img id='banner-img' src={require('../assets/banner2.jpg')} alt='banner' />
             <div className='products-container'>
                 <div className='products'>
                     {
@@ -16,6 +17,7 @@ function Home() {
                             <ProductCard key={index} title={products.title} url={products.url} name={products.name} />)}
                 </div>
             </div>
+            <TodaysDeal />
 
 
         </div>

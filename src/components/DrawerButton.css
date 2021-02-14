@@ -1,7 +1,7 @@
 .drawer-btn {
   display: flex;
   flex-direction: column;
-  height: 6vh;
+  height: 5vh;
   margin-left: 5px;
   background: transparent;
   border: 0px;
@@ -18,8 +18,8 @@
   border-radius: 10%;
 }
 
-@media (min-width: 599px){
-  .drawer-btn{
+@media (min-width: 599px) {
+  .drawer-btn {
     display: none;
   }
 }
