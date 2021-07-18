@@ -15,7 +15,7 @@ const Cart = () => {
                     <p className='cart-item-price'>${item.price}</p>
                     <p>Quantity: {item.quantity}</p>
                 </div>
-                <button disabled>Remove</button>
+                {/* <button disabled>Remove</button> */}
             </div>
         ))
 
