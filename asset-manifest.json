@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/amazon-clone/static/css/main.12ed6675.chunk.css",
-    "main.js": "/amazon-clone/static/js/main.da4ca034.chunk.js",
-    "main.js.map": "/amazon-clone/static/js/main.da4ca034.chunk.js.map",
+    "main.css": "/amazon-clone/static/css/main.bd09cf54.chunk.css",
+    "main.js": "/amazon-clone/static/js/main.f390bdfb.chunk.js",
+    "main.js.map": "/amazon-clone/static/js/main.f390bdfb.chunk.js.map",
     "runtime-main.js": "/amazon-clone/static/js/runtime-main.1cf4aa72.js",
     "runtime-main.js.map": "/amazon-clone/static/js/runtime-main.1cf4aa72.js.map",
-    "static/js/2.70b5d496.chunk.js": "/amazon-clone/static/js/2.70b5d496.chunk.js",
-    "static/js/2.70b5d496.chunk.js.map": "/amazon-clone/static/js/2.70b5d496.chunk.js.map",
+    "static/js/2.36aa7eb0.chunk.js": "/amazon-clone/static/js/2.36aa7eb0.chunk.js",
+    "static/js/2.36aa7eb0.chunk.js.map": "/amazon-clone/static/js/2.36aa7eb0.chunk.js.map",
     "index.html": "/amazon-clone/index.html",
-    "precache-manifest.fa9ef513c1a6ea85eb106ff21ee8190b.js": "/amazon-clone/precache-manifest.fa9ef513c1a6ea85eb106ff21ee8190b.js",
+    "precache-manifest.c78b22d5ccee2ec1f834bd9f0405f962.js": "/amazon-clone/precache-manifest.c78b22d5ccee2ec1f834bd9f0405f962.js",
     "service-worker.js": "/amazon-clone/service-worker.js",
-    "static/css/main.12ed6675.chunk.css.map": "/amazon-clone/static/css/main.12ed6675.chunk.css.map",
-    "static/js/2.70b5d496.chunk.js.LICENSE.txt": "/amazon-clone/static/js/2.70b5d496.chunk.js.LICENSE.txt",
-    "static/media/banner2.jpg": "/amazon-clone/static/media/banner2.a5629b35.jpg",
+    "static/css/main.bd09cf54.chunk.css.map": "/amazon-clone/static/css/main.bd09cf54.chunk.css.map",
+    "static/js/2.36aa7eb0.chunk.js.LICENSE.txt": "/amazon-clone/static/js/2.36aa7eb0.chunk.js.LICENSE.txt",
+    "static/media/banner2.jpg": "/amazon-clone/static/media/banner2.0fb81d41.jpg",
     "static/media/laptop.jpg": "/amazon-clone/static/media/laptop.1629ff3e.jpg",
     "static/media/masks.jpg": "/amazon-clone/static/media/masks.cde870d5.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1cf4aa72.js",
-    "static/js/2.70b5d496.chunk.js",
-    "static/css/main.12ed6675.chunk.css",
-    "static/js/main.da4ca034.chunk.js"
+    "static/js/2.36aa7eb0.chunk.js",
+    "static/css/main.bd09cf54.chunk.css",
+    "static/js/main.f390bdfb.chunk.js"
   ]
 }
