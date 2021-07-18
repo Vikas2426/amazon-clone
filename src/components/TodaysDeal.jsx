@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import './TodaysDeal.css'
 import list from '../assets/todaysDealItem'
+import next from '../assets/next.png'
 import DealEndsIn from '../assets/DealEndsIn'
 
 function TodaysDeal() {
@@ -17,7 +18,7 @@ function TodaysDeal() {
 
     return (
         <div className='deals-container'>
-            <div className="scroller left-scroller" onClick={scrollLeft}> <img src='/next.png' alt='scroll left' /></div>
+            <div className="scroller left-scroller" onClick={scrollLeft}> <img src={next} alt='scroll left' /></div>
             <div className="deals-carousel">
                 Today's Deals
 
@@ -32,7 +33,7 @@ function TodaysDeal() {
                     </li>)}
                 </ul>
             </div>
-            <div className="scroller right-scroller" onClick={scrollRight}> <img src='/next.png' alt='scroll right' /></div>
+            <div className="scroller right-scroller" onClick={scrollRight}> <img src={next} alt='scroll right' /></div>
         </div>
 
     )
