@@ -3,6 +3,7 @@
   text-align: center;
 }
 .login-page {
+  background-color: #131921;
   height: 100vh;
   display: flex;
   justify-content: space-around;
@@ -77,4 +78,14 @@ input {
 
 .google {
   background-color: #4285f4;
+}
+
+@media (max-width: 600px) {
+  .login-card {
+    width: 90%;
+    height: 70%;
+  }
+  .logo-container {
+    margin: 0 0 -10% 0%;
+  }
 }

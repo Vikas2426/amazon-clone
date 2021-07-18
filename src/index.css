@@ -12,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(216, 216, 216, 0.418);
+  overflow-x: hidden;
 }
 
 code {
