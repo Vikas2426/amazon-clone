@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../firebase/firebase.utils.js';
+import { itemCountContext } from './ContextProvider.jsx';
 
 
 export default function HeaderLinks() {
-
+    const itemCount = useContext(itemCountContext);
     const [user] = useAuthState(auth);
-    console.log(user)
     return (
         <div className='header-links'>
             {/* Login  */}
@@ -38,7 +38,7 @@ export default function HeaderLinks() {
             <Link to='/cart' className='nav-link'>
                 <div className='nav-link-cart'>
                     <ShoppingCartIcon />
-                    <div className='item-count'>0</div>
+                    <div className='item-count'>{itemCount}</div>
                 </div>
             </Link>
         </div>

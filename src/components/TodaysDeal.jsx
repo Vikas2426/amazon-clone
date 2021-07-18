@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import './TodaysDeal.css'
 import list from '../assets/todaysDealItem'
 import next from '../assets/next.png'
-import DealEndsIn from './DealEndsIn'
+import AddToCart from './AddToCart'
 
 function TodaysDeal() {
 
@@ -27,10 +27,11 @@ function TodaysDeal() {
                     {list.map(item => <li className="deal-product" key={item.imgUrl}>
 
                         <img className="deal-img" src={item.imgUrl} alt='deal-product' />
-                        <div className="deal-price">{item.price}</div>
-                        <DealEndsIn />
-
+                        <div className="deal-price">${item.price}
+                            <AddToCart item={item} />
+                        </div>
                     </li>)}
+
                 </ul>
             </div>
             <div className="scroller right-scroller" onClick={scrollRight}> <img src={next} alt='scroll right' /></div>

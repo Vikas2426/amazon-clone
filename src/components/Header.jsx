@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
-import HeaderLinks from './HeaderLinks.js';
+import HeaderLinks from './HeaderLinks';
 import "./Header.css";
-import DrawerButton from './DrawerButton.js';
-import SideDrawer from './SideDrawer.js'
+import DrawerButton from './DrawerButton';
+import SideDrawer from './SideDrawer'
 
 
 const Header = () => {
@@ -32,6 +32,7 @@ const Header = () => {
         </div>
 
         {/* Links */}
+
         <HeaderLinks />
     </nav>
 }

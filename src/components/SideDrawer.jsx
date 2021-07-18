@@ -1,8 +1,8 @@
 import React from 'react';
-import HeaderLinks from './HeaderLinks.js';
+import HeaderLinks from './HeaderLinks';
 import './SideDrawer.css'
 
-function SideDrawer({btnClick}) {
+function SideDrawer({ btnClick }) {
     const handleClick = (e) => {
         e.preventDefault();
         btnClick();

@@ -1,8 +1,9 @@
 .deals-container {
   width: 100vw;
-  height: 40vh;
+  min-height: 40vh;
   padding: 2.2em;
   position: relative;
+  margin-bottom: 5%;
 }
 .deals-carousel {
   padding: 1.2em 0.8em 0.8em 0.8em;
@@ -19,7 +20,7 @@ ul {
 
 .scroller {
   position: absolute;
-  top: 60%;
+  top: 40%;
   cursor: pointer;
   width: 35px;
   height: 100px;
@@ -28,7 +29,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font-size: 3em; */
   color: rgb(32, 32, 32);
 }
 .scroller img {
@@ -52,6 +52,7 @@ li {
   justify-content: center;
   align-items: center;
   color: black;
+  min-width: 200px;
 }
 
 li > img {
@@ -59,8 +60,11 @@ li > img {
   height: 65%;
 }
 
-.deal-time {
-  color: rgb(153, 153, 153);
+.deal-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 ::-webkit-scrollbar {

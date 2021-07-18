@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link, Redirect } from 'react-router-dom';
-import LoginCard from './LoginCard.js';
-import SignInCard from './SignInCard.js';
+import LoginCard from './LoginCard';
+import SignInCard from './SignInCard';
 import { auth } from '../firebase/firebase.utils.js'
 import { useAuthState } from 'react-firebase-hooks/auth';
 function Login() {

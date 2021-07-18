@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header.js';
+import Header from './Header';
 const Checkout = () => {
     return <div className="checkout">
         <Header />

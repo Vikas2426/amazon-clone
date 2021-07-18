@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './Header.js';
-import ProductCard from './ProductCard.js';
+import Header from './Header';
+import ProductCard from './ProductCard';
 import productList from '../assets/productList.js';
 import './Home.css'
-import TodaysDeal from './TodaysDeal.jsx';
+import TodaysDeal from './TodaysDeal';
 
 function Home() {
     return (
