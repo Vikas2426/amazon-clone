@@ -23,3 +23,11 @@
     display: none;
   }
 }
+
+@media (max-width: 599px) {
+  .drawer-btn {
+    /* height: 4vh; */
+    width: 2vh;
+    align-self: center;
+  }
+}

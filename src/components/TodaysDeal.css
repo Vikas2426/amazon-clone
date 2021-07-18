@@ -78,3 +78,22 @@ li > img {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+@media (max-width: 600px) {
+  .deals-container {
+    padding: 5px;
+  }
+  .scroller {
+    top: 45%;
+    width: 20px;
+    height: 60px;
+  }
+
+  .left-scroller {
+    left: 5px;
+  }
+
+  .right-scroller {
+    right: 5px;
+  }
+}

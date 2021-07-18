@@ -50,3 +50,9 @@
   flex: 1;
   text-decoration: none;
 }
+
+@media (max-width: 600px) {
+  .product-card {
+    min-width: 90vw;
+  }
+}

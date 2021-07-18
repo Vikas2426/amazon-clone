@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import './TodaysDeal.css'
 import list from '../assets/todaysDealItem'
 import next from '../assets/next.png'
-import DealEndsIn from '../assets/DealEndsIn'
+import DealEndsIn from './DealEndsIn'
 
 function TodaysDeal() {
 
@@ -28,7 +28,7 @@ function TodaysDeal() {
 
                         <img className="deal-img" src={item.imgUrl} alt='deal-product' />
                         <div className="deal-price">{item.price}</div>
-                        {/* <DealEndsIn /> */}
+                        <DealEndsIn />
 
                     </li>)}
                 </ul>

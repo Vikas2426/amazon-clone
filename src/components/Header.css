@@ -53,6 +53,9 @@
 }
 
 @media (max-width: 599px) {
+  .nav {
+    height: 50px;
+  }
   .header > .header-links {
     display: none;
   }
