@@ -58,3 +58,23 @@ li > img {
 .deal-time {
   color: rgb(153, 153, 153);
 }
+
+.left-scroller > img {
+  transform: rotate(180deg);
+}
+
+::-webkit-scrollbar {
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #999999;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(27, 27, 27);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

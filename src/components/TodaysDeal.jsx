@@ -17,7 +17,7 @@ function TodaysDeal() {
 
     return (
         <div className='deals-container'>
-            <div className="scroller left-scroller" onClick={scrollLeft}> &#60; </div>
+            <div className="scroller left-scroller" onClick={scrollLeft}> <img src='/next.png' alt='scroll left' /></div>
             <div className="deals-carousel">
                 Today's Deals
 
@@ -27,13 +27,12 @@ function TodaysDeal() {
 
                         <img className="deal-img" src={item.imgUrl} alt='deal-product' />
                         <div className="deal-price">{item.price}</div>
-                        <DealEndsIn />
+                        {/* <DealEndsIn /> */}
 
                     </li>)}
                 </ul>
             </div>
-            <div className="scroller right-scroller" onClick={scrollRight}>  &#62; </div>
-
+            <div className="scroller right-scroller" onClick={scrollRight}> <img src='/next.png' alt='scroll right' /></div>
         </div>
 
     )

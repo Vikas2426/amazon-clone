@@ -8,12 +8,14 @@ import { auth } from '../firebase/firebase.utils.js';
 export default function HeaderLinks() {
 
     const [user] = useAuthState(auth);
+    console.log(user)
     return (
         <div className='header-links'>
             {/* Login  */}
 
             {user ?
                 <div className='nav-link-options'>
+                    <span className='nav-link-option-top'>{`${user.displayName}`},</span>
                     <span className='nav-link-option-bottom' onClick={() => auth.signOut()}>Sign Out</span>
                 </div>
                 :
@@ -32,10 +34,10 @@ export default function HeaderLinks() {
                 </div>
             </Link>
 
-                    {/* Cart & Counter */}
+            {/* Cart & Counter */}
             <Link to='/cart' className='nav-link'>
                 <div className='nav-link-cart'>
-                    <ShoppingCartIcon ></ShoppingCartIcon>
+                    <ShoppingCartIcon />
                     <div className='item-count'>0</div>
                 </div>
             </Link>

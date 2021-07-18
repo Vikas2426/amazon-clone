@@ -7,22 +7,23 @@ import Orders from './components/Orders.js';
 
 
 function App() {
+  const year = new Date().getFullYear();
 
 
   return (
+    <>
+      <Router basename='/amazon-clone'>
+        <div className="App">
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/checkout' component={Checkout} />
+            <Route path='/login' component={Login} />
+            <Route path='/orders' component={Orders} />
 
-    <Router basename='/amazon-clone'>
-      <div className="App">
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/checkout' component={Checkout} />
-          <Route path='/login' component={Login} />
-          <Route path='/orders' component={Orders} />
-
-        </Switch>
-      </div>
-    </Router>
-
+          </Switch>
+        </div>
+      </Router>
+    </>
 
   );
 }
