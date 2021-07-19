@@ -13,56 +13,58 @@ import watch from '../assets/watch.jpg'
 
 
 const list = [{
+    name: 'Chair',
     imgUrl: chair,
     price: 500,
 },
 {
+    name: 'Earphones',
     imgUrl: earphones,
     price: 375,
 },
 {
-    imgUrl: geyser
-    ,
+    name:'Geyser',
+    imgUrl: geyser,
     price: 1025,
 },
 {
-    imgUrl: iphone
-    ,
+    name:'Iphone',
+    imgUrl: iphone,
     price: 645,
 },
 {
-    imgUrl: laptop
-    ,
+    name:'Laptop',
+    imgUrl: laptop,
     price: 665,
 },
 {
-    imgUrl: masks
-    ,
+    name:'Masks',
+    imgUrl: masks,
     price: 905,
 },
 {
-    imgUrl: phone1
-    ,
+    name: 'Phone 1',
+    imgUrl: phone1,
     price: 5400,
 },
-{
-    imgUrl: phone2
-    ,
+{ 
+    name: 'Phone 2',
+    imgUrl: phone2,
     price: 10150,
 },
 {
-    imgUrl: seeds
-    ,
+    name: 'Seeds',
+    imgUrl: seeds,
     price: 35,
 },
 {
-    imgUrl: wallet
-    ,
+    name: 'Wallet',
+    imgUrl: wallet,
     price: 65,
 },
 {
-    imgUrl: watch
-    ,
+    name: 'Watch',
+    imgUrl: watch,
     price: 4675,
 },
 ]

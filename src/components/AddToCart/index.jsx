@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './AddToCart.css';
-import { itemCountContext, setItemCountContext, setItemsContext } from './ContextProvider';
+import { itemCountContext, setItemCountContext, setItemsContext } from '../ContextProvider';
+
 function AddToCart({ item }) {
     const itemCount = useContext(itemCountContext);
     const setItemCount = useContext(setItemCountContext);

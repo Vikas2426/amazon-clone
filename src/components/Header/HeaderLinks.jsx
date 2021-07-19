@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '../firebase/firebase.utils.js';
-import { itemCountContext } from './ContextProvider.jsx';
+import { auth } from '../../firebase/firebase.utils.js';
+import { itemCountContext } from '../ContextProvider.jsx';
 
 
 export default function HeaderLinks() {
@@ -27,12 +27,13 @@ export default function HeaderLinks() {
                 </Link>}
 
             {/* Orders */}
-            <Link to='/orders' className='nav-link'>
+            {/* <Link to='/orders' className='nav-link'> */}
+            <span className='nav-link'>
                 <div className='nav-link-options'>
                     <span className='nav-link-option-top'>Returns</span>
                     <span className='nav-link-option-bottom'>& Orders</span>
                 </div>
-            </Link>
+            </span>
 
             {/* Cart & Counter */}
             <Link to='/cart' className='nav-link'>

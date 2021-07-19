@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderLinks from './HeaderLinks';
+import HeaderLinks from '../Header/HeaderLinks';
 import './SideDrawer.css'
 
 function SideDrawer({ btnClick }) {

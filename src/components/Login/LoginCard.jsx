@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { signInWithGoogle, signInWithEmail } from '../firebase/firebase.utils.js';
+import { signInWithGoogle, signInWithEmail } from '../../firebase/firebase.utils.js';
 
 
 export default function LoginCard({ toggle }) {
