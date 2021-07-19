@@ -16,17 +16,21 @@ function ContextProvider({ children }) {
     const [items, setItems] = useState([]);
 
     function addItems(newItem) {
-        newItem.quantity = 1;
-        const itemsCopy = [...items];
+        let found = false;
+        const itemsCopy = JSON.parse(JSON.stringify(items));
         for (const item of itemsCopy) {
             if (item.imgUrl === newItem.imgUrl) {
                 item.quantity++;
+                found = true;
             }
         }
-        if (newItem.quantity === 1) {
-            setItems([...itemsCopy, newItem]);
+        if(!found){
+    newItem.quantity = 1;
+    itemsCopy.push(newItem);
         }
-        setItemCount(prev=>prev+1);
+            setItems(itemsCopy);
+            setItemCount(prev=>prev+1);
+        
     }
 
     function reduceQuantity(reduceItem){
