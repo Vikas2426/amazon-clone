@@ -1,6 +1,8 @@
 .cart-heading{
   border-bottom: 2px solid grey;
   padding: 2%;
+  display: flex;
+  justify-content: space-between;
 }
 .cart-item {
   display: flex;

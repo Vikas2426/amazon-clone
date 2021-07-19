@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import './TodaysDeal.css'
 import list from '../../assets/todaysDealItem'
 import next from '../../assets/next.png'
-import AddToCart from '../AddToCart'
+import Item from '../Item';
 
 function TodaysDeal() {
 
@@ -24,13 +24,9 @@ function TodaysDeal() {
 
                 <ul className="deal-products-container" ref={listRef}>
 
-                    {list.map(item => <li className="deal-product" key={item.imgUrl}>
-
-                        <img className="deal-img" src={item.imgUrl} alt='deal-product' />
-                        <h3>{item.name}</h3>
-                        <div className="deal-price">${item.price}
-                            <AddToCart item={item} />
-                        </div>
+                    {list.map(item =>  
+                    <li className="deal-product" key={item.imgUrl}>
+                    <Item item={item}/>
                     </li>)}
 
                 </ul>

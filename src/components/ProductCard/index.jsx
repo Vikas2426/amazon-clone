@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
 const ProductCard = (props) => {
@@ -24,7 +25,7 @@ const ProductCard = (props) => {
                 <p className='product-name'>{props.name[3]}</p>
             </div>
         </div>
-        <a className='see-more-link' href="/">See more</a>
+        <Link className='see-more-link' to="/products">See more</Link>
 
     </div>
 }

@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Cart from './components/Cart';
 import Home from './components/Home';
-// import Orders from './components/Orders.jsx';
 import ContextProvider from './components/ContextProvider.jsx';
+import Products from './components/Products';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
               <Route path='/' exact component={Home} />
               <Route path='/cart' component={Cart} />
               <Route path='/login' component={Login} />
-              {/* <Route path='/orders' component={Orders} /> */}
+              <Route path='/products' component={Products} />
 
             </Switch>
           </div>

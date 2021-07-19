@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { addQuantityContext, itemsContext, reduceQuantityContext, removeItemContext } from '../ContextProvider';
 import Header from '../Header';
+import Total from '../Total';
 import './Cart.css';
 
 const Cart = () => {
@@ -12,9 +13,9 @@ const Cart = () => {
     return <div className="Cart">
         <Header />
  {items.length ? 
- <h1 className='cart-heading'>Your Cart:</h1>
+ <h2 className='cart-heading'>Your Cart:  <Total/></h2>
  : 
- <h1 className='cart-heading' >Your Cart: is empty</h1> 
+ <h2 className='cart-heading' >Your Cart: is empty</h2> 
  }
         {items.length ? items.map(item => (
             <div className='cart-item' key={item.imgUrl}>
@@ -33,6 +34,7 @@ const Cart = () => {
         ))
 :<></>
         }
+        {/* Total: <Total/> */}
     </div>
 }
 
