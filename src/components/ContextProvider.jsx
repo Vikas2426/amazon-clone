@@ -17,21 +17,23 @@ function ContextProvider({ children }) {
 
     function addItems(newItem) {
         newItem.quantity = 1;
-        for (const item of items) {
+        const itemsCopy = [...items];
+        for (const item of itemsCopy) {
             if (item.imgUrl === newItem.imgUrl) {
                 item.quantity++;
             }
         }
         if (newItem.quantity === 1) {
-
-            setItems(prev => [...prev, newItem]);
+            setItems([...itemsCopy, newItem]);
         }
+        setItemCount(prev=>prev+1);
     }
 
     function reduceQuantity(reduceItem){
         const newItems = [...items];
         for (let i =0; i<newItems.length; i++) {
             if (newItems[i].imgUrl === reduceItem.imgUrl) {
+            setItemCount(prev=>prev-1);
                 newItems[i].quantity--;
                 if(newItems[i].quantity === 0){
                     newItems.splice(i,1)
@@ -45,6 +47,8 @@ function addQuantity(addItem){
     const newItems = [...items];
     for (let i =0; i<newItems.length; i++) {
         if (newItems[i].imgUrl === addItem.imgUrl) {
+            setItemCount(prev=>prev+1);
+
             newItems[i].quantity++;
         }
     }
@@ -55,9 +59,11 @@ function removeItem(item){
     const newItems = [...items];
     for (let i =0; i<newItems.length; i++) {
         if (newItems[i].imgUrl === item.imgUrl) {
+            setItemCount(prev=>prev-item.quantity);
             newItems.splice(i,1);
         }
     }
+
         setItems(newItems);
 }
     
