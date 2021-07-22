@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef} from 'react'
 import './TodaysDeal.css'
 import list from '../../assets/todaysDealItem'
 import next from '../../assets/next.png'
@@ -16,6 +16,7 @@ function TodaysDeal() {
         listRef.current.scrollLeft += 300;
     }
 
+  
     return (
         <div className='deals-container'>
             <div className="scroller left-scroller" onClick={scrollLeft}> <img src={next} alt='scroll left' /></div>

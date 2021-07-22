@@ -53,11 +53,11 @@ ul {
 }
 
 ::-webkit-scrollbar-track {
-  background: #c2c2c2;
+  background: rgb(27, 27, 27);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(27, 27, 27);
+  background: #c2c2c2;
 }
 
 ::-webkit-scrollbar-thumb:hover {

@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {useSpring, animated} from 'react-spring';
+
 import './ProductCard.css';
 
 const ProductCard = (props) => {
-    return <div className='product-card'>
+    const fade = useSpring({
+        from: {opacity: 0, height: '0%'},
+        to:{opacity: 1, height: '100%'},
+        config:{duration: 500}
+    })
+    return <animated.div className='product-card' style={fade}>
         <h3 className='title'>{props.title}</h3>
         <div className='img-container'>
             <div className='product-details'>
@@ -26,8 +33,7 @@ const ProductCard = (props) => {
             </div>
         </div>
         <Link className='see-more-link' to="/products">See more</Link>
-
-    </div>
+    </animated.div>
 }
 
 export default ProductCard;

@@ -12,61 +12,62 @@ import watch from '../assets/watch.jpg'
 
 
 
-const list = [{
-    name: 'Chair',
+const list = [
+  {
+    name: "Chair",
     imgUrl: chair,
     price: 500,
-},
-{
-    name: 'Earphones',
+  },
+  {
+    name: "Earphones",
     imgUrl: earphones,
-    price: 375,
-},
-{
-    name:'Geyser',
+    price: 300,
+  },
+  {
+    name: "Geyser",
     imgUrl: geyser,
-    price: 1025,
-},
-{
-    name:'Iphone',
+    price: 600,
+  },
+  {
+    name: "Iphone",
     imgUrl: iphone,
-    price: 645,
-},
-{
-    name:'Laptop',
+    price: 600,
+  },
+  {
+    name: "Laptop",
     imgUrl: laptop,
-    price: 665,
-},
-{
-    name:'Masks',
+    price: 650,
+  },
+  {
+    name: "Masks",
     imgUrl: masks,
-    price: 905,
-},
-{
-    name: 'Phone 1',
+    price: 5,
+  },
+  {
+    name: "Phone 1",
     imgUrl: phone1,
-    price: 5400,
-},
-{ 
-    name: 'Phone 2',
+    price: 540,
+  },
+  {
+    name: "Phone 2",
     imgUrl: phone2,
-    price: 10150,
-},
-{
-    name: 'Seeds',
+    price: 400,
+  },
+  {
+    name: "Seeds",
     imgUrl: seeds,
-    price: 35,
-},
-{
-    name: 'Wallet',
+    price: 30,
+  },
+  {
+    name: "Wallet",
     imgUrl: wallet,
-    price: 65,
-},
-{
-    name: 'Watch',
+    price: 20,
+  },
+  {
+    name: "Watch",
     imgUrl: watch,
-    price: 4675,
-},
+    price: 150,
+  },
 ]
 
 export default list;
