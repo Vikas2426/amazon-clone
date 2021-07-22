@@ -8,3 +8,7 @@ margin: 0 5px;
 .total{
     font-size: large;
 }
+.total>p{
+    text-align: center;
+    margin-bottom: 10%;
+}
