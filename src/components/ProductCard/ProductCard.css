@@ -54,6 +54,7 @@
 
 @media (max-width: 600px) {
   .product-card {
-    min-width: 90vw;
+    min-width: 80vw;
+    border: 1px solid lightgrey
   }
 }
