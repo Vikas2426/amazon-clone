@@ -5,6 +5,7 @@ import Header from "../Header";
 import Total from "../Total";
 import "./Cart.css";
 import { useTransition, animated } from "react-spring";
+import banner from "../../assets/cart-banner.jpg";
 
 const Cart = () => {
   const items = useContext(itemsContext);
@@ -18,6 +19,7 @@ const Cart = () => {
   return (
     <div className="Cart">
       <Header />
+      <img className="cart-banner" src={banner} alt="cart-banner" />
       {items.length ? (
         <h2 className="cart-heading">
           Your Cart: <Total />
@@ -25,21 +27,17 @@ const Cart = () => {
       ) : (
         <h2 className="cart-heading">Your Cart: is empty</h2>
       )}
-
-      {/* {items.length ? (
-        items.map((item) => (
-          <div className="cart-item" key={item.imgUrl}>
-            <CartItem item={item} />
-          </div>
-        ))
+      {!items.length ? (
+        <h1 className="empty-cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </h1>
       ) : (
-        <></>
-      )} */}
-      {slideRight((styles, item) => (
-        <animated.div className="cart-item" key={item.imgUrl} style={styles}>
-          <CartItem item={item} />
-        </animated.div>
-      ))}
+        slideRight((styles, item) => (
+          <animated.div className="cart-item" key={item.imgUrl} style={styles}>
+            <CartItem item={item} />
+          </animated.div>
+        ))
+      )}
     </div>
   );
 };

@@ -16,9 +16,9 @@ function AddToCart({ item }) {
     <button
       className="add-to-Cart-btn"
       onClick={addToCart}
-      style={{ backgroundColor: clicked ? "rgb(173,223,173)" : "#fada5f" }}
+      style={{ backgroundColor: clicked ? "rgb(173,223,173)" : "#ffd21d" }}
     >
-      Add to Cart
+      <i class="fas fa-cart-plus"></i>
     </button>
   );
 }

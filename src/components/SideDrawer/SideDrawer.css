@@ -7,21 +7,22 @@
   left: 0;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
   z-index: 100;
+  font-size: 1.3em;
 }
 
 .drawer-close-btn {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  color: white;
+  padding:4%;
 }
 
 button {
   background: transparent;
   color: white;
   border: 0;
-  font-size: 2.5em;
-  cursor: pointer;
-  margin: 10px 10px -10px auto;
+  font-size: 1.5em;
 }
 
 .side-drawer .header-links .nav-link-options {
@@ -31,7 +32,7 @@ button {
 
 .side-drawer .header-links .nav-link-options > span {
   font-size: 1em;
-  margin: 2px;
+  margin: 5px;
 }
 
 .nav-link:hover {

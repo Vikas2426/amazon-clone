@@ -1,22 +1,10 @@
 .drawer-btn {
   display: flex;
   flex-direction: column;
-  height: 5vh;
-  margin-left: 5px;
-  background: transparent;
-  border: 0px;
-  width: 4vh;
-  padding: 0px;
-  justify-content: space-around;
-  margin-top: -3px;
+  margin-top: -12px;
+  font-size: 1.8em;
 }
 
-.drawer-btn-line {
-  width: 100%;
-  height: 2px;
-  background: white;
-  border-radius: 10%;
-}
 
 @media (min-width: 599px) {
   .drawer-btn {
@@ -24,10 +12,3 @@
   }
 }
 
-@media (max-width: 599px) {
-  .drawer-btn {
-    /* height: 4vh; */
-    width: 2vh;
-    align-self: center;
-  }
-}
