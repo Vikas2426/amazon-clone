@@ -6,10 +6,10 @@ function Item({ item }) {
     <>
       <img className="deal-img" src={item.imgUrl} alt="deal-product" />
       <h3>{item.name}</h3>
-      <div className="deal-price">
+      <p className="deal-price">
         ${item.price}
+      </p>
         <AddToCart item={item} />
-      </div>
     </>
   );
 }
