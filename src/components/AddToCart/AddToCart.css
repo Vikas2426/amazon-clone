@@ -1,7 +1,8 @@
 .add-to-Cart-btn {
-  background-color: yellow;
-  color: black;
-  font-size: small;
-  padding: 5px 10px;
+  color: rgba(0, 0, 0, 0.822);
+  font-size: 1.5em;
+  padding: 7px 30px;
   align-self: center;
+  border-radius: 5px;
+  cursor: pointer;
 }

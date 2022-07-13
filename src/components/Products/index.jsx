@@ -36,7 +36,9 @@ function Products() {
     <div>
       <Header />
       <div className="sort-filter">
-        <label>Sort by:</label>
+        <label>
+          Sort by <i class="fas fa-sort"></i>
+        </label>
         <button className="sort-btn" onClick={sortByName}>
           Name
         </button>

@@ -10,7 +10,9 @@ function SideDrawer({ btnClick }) {
   return (
     <nav className="side-drawer">
       <div className="drawer-close-btn">
-        <button onClick={handleClick}>X</button>
+        <button onClick={handleClick}>
+          <i class="fas fa-times"></i>
+        </button>
       </div>
       <HeaderLinks />
     </nav>

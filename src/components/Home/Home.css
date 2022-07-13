@@ -9,14 +9,20 @@
 
 .products-container {
   width: 100vw;
-  display: flex;
-  justify-content: center;
+  height: fit-content;
   margin-top: -15%;
-}
-
-.products {
-  width: 93vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: space-around;
+  z-index:9;
+}
+
+@media (max-width: 600px) {
+  .products-container {
+    margin-bottom: 5%;
+  }
+}
+
+.Home{
+  background-color: rgb(230, 230, 230);
 }
