@@ -29,7 +29,7 @@ function AddToCart({ item }) {
     />
   ) : (
     <button className="add-to-Cart-btn" onClick={addItem}>
-      <i class="fas fa-cart-plus"></i>
+      <i className="fas fa-cart-plus"></i>
     </button>
   );
 }
