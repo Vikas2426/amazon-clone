@@ -36,6 +36,5 @@ describe("AddToCart", () => {
     const addToCartBtn = container.getByRole("button");
     fireEvent.click(addToCartBtn);
     await container.findByText(/minimize/i);
-    container.debug();
   });
 });
