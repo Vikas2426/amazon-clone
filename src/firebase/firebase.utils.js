@@ -1,6 +1,6 @@
-import firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 const config = {
   apiKey: "AIzaSyBPH1mjsUtqA9fkCNyyD7f1nESIEwRhCWc",
   authDomain: "clone-81a36.firebaseapp.com",
@@ -21,7 +21,9 @@ const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
-export const createUserWithEmail = (email, password) => auth.createUserWithEmailAndPassword(email, password);
-export const signInWithEmail = (email, password) => auth.signInWithEmailAndPassword(email, password);
+export const createUserWithEmail = (email, password) =>
+  auth.createUserWithEmailAndPassword(email, password);
+export const signInWithEmail = (email, password) =>
+  auth.signInWithEmailAndPassword(email, password);
 
 export default firebase;

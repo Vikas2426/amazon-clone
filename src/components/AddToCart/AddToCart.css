@@ -1,8 +1,26 @@
 .add-to-Cart-btn {
   color: rgba(0, 0, 0, 0.822);
   font-size: 1.5em;
-  padding: 7px 30px;
+  padding: 7px 20px;
   align-self: center;
   border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.add-remove-item-btn {
+  border: 1px solid black;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-remove-btn {
+  width: 33%;
+  color: rgb(21, 21, 21);
+  background-color: rgb(159, 159, 159);
   cursor: pointer;
 }

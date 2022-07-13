@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { itemsContext } from "../ContextProvider";
+import { cartContext } from "../ContextProvider";
 import "./Total.css";
 function Total() {
-  const items = useContext(itemsContext);
+  const { items } = useContext(cartContext);
   const getTotal = () => {
     let total = 0;
     for (const item of items) {

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import CartItem from "../CartItem/CartItem";
-import { itemsContext } from "../ContextProvider";
+import { cartContext } from "../ContextProvider";
 import Header from "../Header";
 import Total from "../Total";
 import "./Cart.css";
@@ -8,7 +8,7 @@ import { useTransition, animated } from "react-spring";
 import banner from "../../assets/cart-banner.jpg";
 
 const Cart = () => {
-  const items = useContext(itemsContext);
+  const { items } = useContext(cartContext);
 
   const slideRight = useTransition(items, {
     enter: { x: "0%", postiion: "relative" },

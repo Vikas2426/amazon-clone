@@ -1,23 +1,34 @@
 import React, { useContext, useState } from "react";
 import "./AddToCart.css";
-import { setItemsContext } from "../ContextProvider";
+import { cartContext, setItemsContext } from "../ContextProvider";
+import AddRemoveBtns from "../AddRemoveBtns";
 
 function AddToCart({ item }) {
-  const addItems = useContext(setItemsContext);
+  const { addItems, reduceQuantity } = useContext(cartContext);
   const [clicked, setClicked] = useState(false);
+  const [quantity, setQuantity] = useState(0);
 
-  const addToCart = () => {
-    addItems(item);
+  const addItem = () => {
+    const currentQuantity = addItems(item);
     if (!clicked) {
       setClicked(true);
     }
+    setQuantity(currentQuantity);
   };
-  return (
-    <button
-      className="add-to-Cart-btn"
-      onClick={addToCart}
-      style={{ backgroundColor: clicked ? "rgb(173,223,173)" : "#ffd21d" }}
-    >
+
+  const removeItem = () => {
+    const currentQuantity = reduceQuantity(item);
+    setQuantity(currentQuantity);
+  };
+
+  return quantity ? (
+    <AddRemoveBtns
+      quantity={quantity}
+      addItem={addItem}
+      removeItem={removeItem}
+    />
+  ) : (
+    <button className="add-to-Cart-btn" onClick={addItem}>
       <i class="fas fa-cart-plus"></i>
     </button>
   );
