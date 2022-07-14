@@ -1,32 +1,28 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./AddToCart.css";
-import { cartContext, setItemsContext } from "../ContextProvider";
-import AddRemoveBtns from "../AddRemoveBtns";
+import { cartContext } from "../ContextProvider";
 
 function AddToCart({ item }) {
-  const { addItems, reduceQuantity } = useContext(cartContext);
-  const [clicked, setClicked] = useState(false);
-  const [quantity, setQuantity] = useState(0);
+  const { addQuantity, reduceQuantity } = useContext(cartContext);
 
   const addItem = () => {
-    const currentQuantity = addItems(item);
-    if (!clicked) {
-      setClicked(true);
-    }
-    setQuantity(currentQuantity);
+    addQuantity(item);
   };
 
   const removeItem = () => {
-    const currentQuantity = reduceQuantity(item);
-    setQuantity(currentQuantity);
+    reduceQuantity(item);
   };
 
-  return quantity ? (
-    <AddRemoveBtns
-      quantity={quantity}
-      addItem={addItem}
-      removeItem={removeItem}
-    />
+  return item.quantity ? (
+    <div className="add-remove-item-btn">
+      <button className="add-remove-btn" onClick={removeItem}>
+        <span className="material-symbols-outlined">remove</span>
+      </button>
+      <h3>{item.quantity}</h3>
+      <button className="add-remove-btn" onClick={addItem}>
+        <span className="material-symbols-outlined">add</span>
+      </button>
+    </div>
   ) : (
     <button className="add-to-Cart-btn" onClick={addItem}>
       <i className="fas fa-cart-plus"></i>

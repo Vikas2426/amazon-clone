@@ -11,7 +11,8 @@
 }
 
 .add-remove-item-btn {
-  border: 1px solid black;
+  border: 1px solid yellow;
+  background-color: yellow;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -21,6 +22,8 @@
 .add-remove-btn {
   width: 33%;
   color: rgb(21, 21, 21);
-  background-color: rgb(159, 159, 159);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

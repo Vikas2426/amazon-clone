@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Cart from "..";
 
 jest.mock("../../Header", () => "header");
@@ -20,6 +20,7 @@ jest.mock("react", () => ({
 describe("Cart", () => {
   it("should render without error", () => {
     render(<Cart />);
+    expect(screen.getByText(/1/)).toBeInTheDocument();
     expect(screen).toMatchSnapshot();
   });
 });

@@ -1,39 +1,49 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import {
+  fireEvent,
+  render,
+  screen,
+  waitForElementToBeRemoved,
+} from "@testing-library/react";
 import React from "react";
 import "@testing-library/jest-dom";
 import AddToCart from "..";
+import ContextProvider from "../../ContextProvider";
 
-const mockAddItems = jest.fn();
-jest.mock("react", () => ({
-  ...jest.requireActual("react"),
-  useContext: () => ({
-    addItems: mockAddItems,
-    reduceQuantity: jest.fn(),
-  }),
-}));
+let item = { imgUrl: "imgUrl" };
 
 describe("AddToCart", () => {
   beforeEach(() => {
-    render(<AddToCart item={{ imgUrl: "imgUrl" }} />);
+    render(
+      <ContextProvider>
+        <AddToCart item={item} />
+      </ContextProvider>
+    );
   });
+
   afterEach(() => {
-    jest.restoreAllMocks();
-    cleanup();
+    item = { imgUrl: "imgUrl" };
   });
   it("should render without error", () => {
     expect(screen.getByRole("button")).toBeInTheDocument();
     expect(screen).toMatchSnapshot();
   });
-  it("should call addItems function", () => {
+  it("should call addQuantity function", () => {
     const addToCartBtn = screen.getByRole("button");
     fireEvent.click(addToCartBtn);
-    expect(mockAddItems).toHaveBeenCalledTimes(1);
+    expect(item).toHaveProperty("quantity");
   });
-  it("should call AddRemoveBtns component", async () => {
-    mockAddItems.mockReturnValue(1);
+  it("should render add and remove button", async () => {
     const addToCartBtn = screen.getByRole("button");
     fireEvent.click(addToCartBtn);
-    expect(mockAddItems).toHaveReturnedWith(1);
-    expect(await screen.findByText(/minimize/i)).toBeInTheDocument();
+    expect(item).toHaveProperty("quantity");
+    expect(await screen.findByText(/remove/i)).toBeInTheDocument();
+  });
+  it("should remove item", async () => {
+    const addToCartBtn = screen.getByRole("button");
+    fireEvent.click(addToCartBtn);
+    expect(item).toHaveProperty("quantity");
+    const removeBTn = await screen.findByText(/remove/i);
+    fireEvent.click(removeBTn);
+    expect(item.quantity).toBe(0);
   });
 });

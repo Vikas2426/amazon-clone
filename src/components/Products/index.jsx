@@ -7,31 +7,19 @@ import "./Products.css";
 function Products() {
   const [itemList, setList] = useState(list);
 
-  const sortByName = () => {
-    list.sort((first, second) => {
-      if (first.name < second.name) {
+  const sortBy = (key) => {
+    itemList.sort((first, second) => {
+      if (first[key] < second[key]) {
         return -1;
       }
-      if (first.name < second.name) {
+      if (first[key] < second[key]) {
         return 1;
       }
       return 0;
     });
+    setList(JSON.parse(JSON.stringify(itemList)));
+  };
 
-    setList(JSON.parse(JSON.stringify(list)));
-  };
-  const sortByPrice = () => {
-    list.sort((first, second) => {
-      if (first.price < second.price) {
-        return -1;
-      }
-      if (first.price < second.price) {
-        return 1;
-      }
-      return 0;
-    });
-    setList(JSON.parse(JSON.stringify(list)));
-  };
   return (
     <div>
       <Header />
@@ -39,10 +27,10 @@ function Products() {
         <label>
           Sort by <i class="fas fa-sort"></i>
         </label>
-        <button className="sort-btn" onClick={sortByName}>
+        <button className="sort-btn" onClick={() => sortBy("name")}>
           Name
         </button>
-        <button className="sort-btn" onClick={sortByPrice}>
+        <button className="sort-btn" onClick={() => sortBy("price")}>
           Price
         </button>
       </div>

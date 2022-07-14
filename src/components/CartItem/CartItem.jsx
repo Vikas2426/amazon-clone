@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import AddRemoveBtns from "../AddRemoveBtns";
 import { cartContext } from "../ContextProvider";
+import AddToCart from "../AddToCart";
 
 function CartItem({ item }) {
-  const { removeItem, reduceQuantity, addQuantity } = useContext(cartContext);
+  const { removeItem } = useContext(cartContext);
 
   return (
     <>
@@ -11,11 +11,7 @@ function CartItem({ item }) {
       <div className="cart-item-details">
         <h3>{item.name}</h3>
         <p className="cart-item-price">${item.price}</p>
-        <AddRemoveBtns
-          quantity={item.quantity}
-          addItem={() => addQuantity(item)}
-          removeItem={() => reduceQuantity(item)}
-        />
+        <AddToCart item={item} />
         <button className="remove-item-btn" onClick={() => removeItem(item)}>
           Remove
         </button>
