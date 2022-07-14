@@ -19,8 +19,7 @@ jest.mock("react", () => ({
 
 describe("Cart", () => {
   it("should render without error", () => {
-    const { debug } = render(<Cart />);
-    debug();
+    render(<Cart />);
     expect(screen).toMatchSnapshot();
   });
 });

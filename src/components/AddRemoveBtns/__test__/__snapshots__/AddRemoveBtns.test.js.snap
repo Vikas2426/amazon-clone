@@ -2,63 +2,6 @@
 
 exports[`AddRemoveBtns should render without error 1`] = `
 Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        class="add-remove-item-btn"
-      >
-        <button
-          class="add-remove-btn"
-        >
-          <span
-            class="material-symbols-outlined"
-          >
-            minimize
-          </span>
-        </button>
-        <h3>
-          0
-        </h3>
-        <button
-          class="add-remove-btn"
-        >
-          <span
-            class="material-symbols-outlined"
-          >
-            add
-          </span>
-        </button>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="add-remove-item-btn"
-    >
-      <button
-        class="add-remove-btn"
-      >
-        <span
-          class="material-symbols-outlined"
-        >
-          minimize
-        </span>
-      </button>
-      <h3>
-        0
-      </h3>
-      <button
-        class="add-remove-btn"
-      >
-        <span
-          class="material-symbols-outlined"
-        >
-          add
-        </span>
-      </button>
-    </div>
-  </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],
@@ -92,6 +35,7 @@ Object {
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
+  "logTestingPlaygroundURL": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
@@ -108,7 +52,5 @@ Object {
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
 }
 `;
