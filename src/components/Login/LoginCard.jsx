@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { signInWithGoogle, signInWithEmail } from "../../firebase/firebase.utils.js";
+import {
+  signInWithGoogle,
+  signInWithEmail,
+} from "../../firebase/firebase.utils.js";
+import LoginSignUpForm from "./LoginSignUpForm.jsx";
 
 export default function LoginCard({ toggle }) {
   const [email, setEmail] = useState("");
@@ -20,20 +24,12 @@ export default function LoginCard({ toggle }) {
 
   return (
     <div className="login-card">
-      <h2>Login</h2>
-      <form>
-        <input type="email" name="email" required placeholder="Email" onChange={handleChange}></input>
-        <input type="password" name="password" required placeholder="Password" onChange={handleChange}></input>
-      </form>
-      <p id="loginTogglerParent">
-        Don't have an account ?
-        <span className="btn loginToggler" onClick={toggle}>
-          Sign Up
-        </span>
-      </p>
-      <button className="btn" type="submit" name="login" onClick={handleClick}>
-        Log In
-      </button>
+      <LoginSignUpForm
+        handleChange={handleChange}
+        pageName={"Login"}
+        toggle={toggle}
+        handleClick={handleClick}
+      />
       <button className="google btn" onClick={signInWithGoogle}>
         Sign in with Google
       </button>

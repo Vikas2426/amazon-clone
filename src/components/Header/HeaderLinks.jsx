@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase/firebase.utils.js";
@@ -15,7 +14,10 @@ export default function HeaderLinks() {
       {user ? (
         <div className="nav-link-options">
           <span className="nav-link-option-top">{`${user.displayName}`},</span>
-          <span className="nav-link-option-bottom" onClick={() => auth.signOut()}>
+          <span
+            className="nav-link-option-bottom"
+            onClick={() => auth.signOut()}
+          >
             Sign Out
           </span>
         </div>
@@ -40,7 +42,7 @@ export default function HeaderLinks() {
       {/* Cart & Counter */}
       <Link to="/cart" className="nav-link">
         <div className="nav-link-cart">
-          <ShoppingCartIcon />
+          <span className="material-symbols-outlined">add_shopping_cart</span>
           <div className="item-count">{itemCount}</div>
         </div>
       </Link>

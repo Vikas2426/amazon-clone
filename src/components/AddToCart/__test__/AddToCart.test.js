@@ -1,4 +1,10 @@
-import { cleanup, fireEvent, render } from "@testing-library/react";
+import {
+  act,
+  cleanup,
+  fireEvent,
+  render,
+  screen,
+} from "@testing-library/react";
 import React from "react";
 import "@testing-library/jest-dom";
 import AddToCart from "..";
@@ -32,9 +38,14 @@ describe("AddToCart", () => {
     expect(mockAddItems).toHaveBeenCalledTimes(1);
   });
   it("should call AddRemoveBtns component", async () => {
-    const container = render(<AddToCart />);
-    const addToCartBtn = container.getByRole("button");
-    fireEvent.click(addToCartBtn);
-    await container.findByText(/minimize/i);
+    act(() => {
+      render(<AddToCart />);
+    });
+    const addToCartBtn = screen.getByRole("button");
+    act(() => {
+      fireEvent.click(addToCartBtn);
+    });
+    screen.debug();
+    expect(screen.findByText(/minimize/i)).toBeTruthy();
   });
 });

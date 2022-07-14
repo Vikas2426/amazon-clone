@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
@@ -12,12 +12,12 @@ function App() {
       <ContextProvider>
         <Router basename="/amazon-clone">
           <div className="App">
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/cart" component={Cart} />
-              <Route path="/login" component={Login} />
-              <Route path="/products" component={Products} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/products" element={<Products />} />
+            </Routes>
           </div>
         </Router>
       </ContextProvider>

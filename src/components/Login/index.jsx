@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Link, Redirect } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import LoginCard from "./LoginCard";
 import SignInCard from "./SignInCard";
 import { auth } from "../../firebase/firebase.utils.js";
@@ -14,16 +14,24 @@ function Login() {
   const [user] = useAuthState(auth);
 
   return user ? (
-    <Redirect to="/" />
+    <Navigate to="/" />
   ) : (
     <div id="login-page-container">
       <Link to="/">
         <div className="logo-container">
-          <img className="logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Logo"></img>
+          <img
+            className="logo"
+            src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+            alt="Logo"
+          ></img>
         </div>
       </Link>
       <div className="login-page">
-        {login ? <LoginCard toggle={handleClick} /> : <SignInCard toggle={handleClick} />}
+        {login ? (
+          <LoginCard toggle={handleClick} />
+        ) : (
+          <SignInCard toggle={handleClick} />
+        )}
       </div>
     </div>
   );
