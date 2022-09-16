@@ -9,7 +9,7 @@ function DrawerButton({ btnClick }) {
 
   return (
     <button className="drawer-btn" onClick={handleClick}>
-      <i class="fas fa-bars"></i>
+      <i className="fas fa-bars"></i>
     </button>
   );
 }

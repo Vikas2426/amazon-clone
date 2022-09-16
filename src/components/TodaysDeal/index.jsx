@@ -3,6 +3,7 @@ import "./TodaysDeal.css";
 import list from "../../assets/todaysDealItem";
 import next from "../../assets/next.png";
 import Item from "../Item";
+import CarouselHeader from "../CarouselHeader";
 
 function TodaysDeal() {
   const listRef = useRef();
@@ -21,7 +22,7 @@ function TodaysDeal() {
         <img src={next} alt="scroll left" />
       </div>
       <div className="deals-carousel">
-        Today's Deals
+        <CarouselHeader />
         <ul className="deal-products-container" ref={listRef}>
           {list.map((item) => (
             <li className="deal-product" key={item.imgUrl}>
