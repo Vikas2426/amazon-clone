@@ -35,7 +35,6 @@ const Header = () => {
       </div>
 
       {/* Links */}
-
       <HeaderLinks />
     </nav>
   );

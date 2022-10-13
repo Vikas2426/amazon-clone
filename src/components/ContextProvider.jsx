@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { createContext } from "react";
 
-export const itemCountContext = createContext();
-export const setItemCountContext = createContext();
-export const itemsContext = createContext();
-export const setItemsContext = createContext();
-export const reduceQuantityContext = createContext();
-export const addQuantityContext = createContext();
-export const removeItemContext = createContext();
 export const cartContext = createContext();
 
 function ContextProvider({ children }) {

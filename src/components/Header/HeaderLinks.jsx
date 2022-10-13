@@ -2,24 +2,28 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase/firebase.utils.js";
-import { itemCountContext } from "../ContextProvider.jsx";
+import { cartContext } from "../ContextProvider.jsx";
 
 export default function HeaderLinks() {
-  const itemCount = useContext(itemCountContext);
+  const { itemCount } = useContext(cartContext);
   const [user] = useAuthState(auth);
   return (
     <div className="header-links">
       {/* Login  */}
 
       {user ? (
-        <div className="nav-link-options">
-          <span className="nav-link-option-top">{`${user.displayName}`},</span>
-          <span
-            className="nav-link-option-bottom"
-            onClick={() => auth.signOut()}
-          >
-            Sign Out
-          </span>
+        <div className="nav-link">
+          <div className="nav-link-options">
+            <span className="nav-link-option-top">
+              {`${user.displayName}`},
+            </span>
+            <span
+              className="nav-link-option-bottom"
+              onClick={() => auth.signOut()}
+            >
+              Sign Out
+            </span>
+          </div>
         </div>
       ) : (
         <Link to="/login" className="nav-link">
@@ -41,9 +45,11 @@ export default function HeaderLinks() {
 
       {/* Cart & Counter */}
       <Link to="/cart" className="nav-link">
-        <div className="nav-link-cart">
-          <span className="material-symbols-outlined">add_shopping_cart</span>
-          <div className="item-count">{itemCount}</div>
+        <div className="nav-link-options">
+          <div className="nav-link-cart">
+            <span className="material-symbols-outlined">add_shopping_cart</span>
+            <div className="item-count">{itemCount}</div>
+          </div>
         </div>
       </Link>
     </div>

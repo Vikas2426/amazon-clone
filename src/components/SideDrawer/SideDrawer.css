@@ -14,27 +14,29 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   color: white;
-  padding:4%;
+  padding: 4%;
 }
 
 button {
+  cursor: pointer;
   background: transparent;
   color: white;
-  border: 0;
   font-size: 1.5em;
+  border: 0;
 }
 
-.side-drawer .header-links .nav-link-options {
+.side-drawer .header-links .nav-link {
   display: block;
   border-bottom: 1px solid white;
 }
 
-.side-drawer .header-links .nav-link-options > span {
+.side-drawer .header-links > span {
   font-size: 1em;
-  margin: 5px;
 }
 
-.nav-link:hover {
-  border: 0;
+.side-drawer .header-links .nav-link .nav-link-options {
+  flex-direction: row;
+  margin-bottom: 1em;
 }
