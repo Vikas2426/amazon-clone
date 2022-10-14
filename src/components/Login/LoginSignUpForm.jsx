@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LoginSignUpForm({ pageName, handleChange, toggle, handleClick }) {
   const toggleBtnText = pageName === "Login" ? "Sign up" : "Log In";
@@ -33,9 +34,19 @@ function LoginSignUpForm({ pageName, handleChange, toggle, handleClick }) {
           {toggleBtnText}
         </span>
       </p>
-      <button className="btn" type="submit" name="signup" onClick={handleClick}>
-        {primaryBtnText}
-      </button>
+      <div className="login-btn-container">
+        <button
+          className="btn"
+          type="submit"
+          name="signup"
+          onClick={handleClick}
+        >
+          {primaryBtnText}
+        </button>
+        <Link to="/" className="btn secondary-btn">
+          Cancel
+        </Link>
+      </div>
     </>
   );
 }
