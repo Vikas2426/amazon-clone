@@ -6,7 +6,7 @@ function LoginSignUpForm({ pageName, handleChange, toggle, handleClick }) {
     pageName === "Login"
       ? "Don't have an account ?"
       : "Already have an account ? ";
-  const primaryBtnText = pageName === "Login" ? "SignUp" : "Login";
+  const primaryBtnText = pageName === "Login" ? "Login" : "SignUp";
 
   return (
     <>
