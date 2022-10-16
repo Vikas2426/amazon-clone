@@ -21,7 +21,7 @@ export default function HeaderLinks() {
               className="nav-link-option-bottom"
               onClick={() => auth.signOut()}
             >
-              Sign Out
+              <Link to="/">Sign Out</Link>
             </span>
           </div>
         </div>
@@ -35,13 +35,12 @@ export default function HeaderLinks() {
       )}
 
       {/* Orders */}
-      {/* <Link to='/orders' className='nav-link'> */}
-      <span className="nav-link">
+      <Link to="/orders" className="nav-link">
         <div className="nav-link-options">
           <span className="nav-link-option-top">Returns</span>
           <span className="nav-link-option-bottom">& Orders</span>
         </div>
-      </span>
+      </Link>
 
       {/* Cart & Counter */}
       <Link to="/cart" className="nav-link">

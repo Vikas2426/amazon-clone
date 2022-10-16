@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginCard from "./LoginCard";
 import SignInCard from "./SignInCard";
 import { auth } from "../../firebase/firebase.utils.js";
@@ -8,14 +8,14 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import WavesBackground from "../WavesBackground.css";
 function Login() {
   const [login, toggleLogin] = useState(true);
-
+  const navigate = useNavigate();
   function handleClick() {
     toggleLogin(!login);
   }
   const [user] = useAuthState(auth);
 
   return user ? (
-    <Navigate to="/" />
+    navigate(-1)
   ) : (
     <WavesBackground>
       <div id="login-container">
