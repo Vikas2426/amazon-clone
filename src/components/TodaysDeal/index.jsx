@@ -1,12 +1,20 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./TodaysDeal.css";
-import list from "../../assets/todaysDealItem";
+// import list from "../../assets/todaysDealItem";
 import next from "../../assets/next.png";
 import Item from "../Item";
 import CarouselHeader from "../CarouselHeader";
+// import useList from "../../assets/todaysDealItem";
 
 function TodaysDeal() {
   const listRef = useRef();
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setList(json));
+  }, []);
 
   const scrollLeft = () => {
     listRef.current.scrollLeft -= 300;
@@ -25,7 +33,7 @@ function TodaysDeal() {
         <CarouselHeader />
         <ul className="deal-products-container" ref={listRef}>
           {list.map((item) => (
-            <li className="deal-product" key={item.imgUrl}>
+            <li className="deal-product" key={item.id}>
               <Item item={item} />
             </li>
           ))}

@@ -33,7 +33,7 @@ const Cart = () => {
         </h1>
       ) : (
         slideRight((styles, item) => (
-          <animated.div className="cart-item" key={item.imgUrl} style={styles}>
+          <animated.div className="cart-item" key={item.id} style={styles}>
             <CartItem item={item} />
           </animated.div>
         ))

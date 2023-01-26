@@ -1,11 +1,15 @@
-import React, { useRef, useState } from "react";
-import list from "../../assets/todaysDealItem";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../Header";
 import Item from "../Item";
 import "./Products.css";
 
 function Products() {
-  const [itemList, setList] = useState(list);
+  const [itemList, setList] = useState([]);
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setList(json));
+  }, []);
   const currentSortFilter = useRef({ sameClicksCount: 1, key: "" });
   const sortBy = (key) => {
     const { key: currentKey, sameClicksCount } = currentSortFilter.current;
@@ -33,7 +37,7 @@ function Products() {
         <label>
           Sort by <i className="fas fa-sort"></i>
         </label>
-        <button className="sort-btn" onClick={() => sortBy("name")}>
+        <button className="sort-btn" onClick={() => sortBy("title")}>
           Name
         </button>
         <button className="sort-btn" onClick={() => sortBy("price")}>

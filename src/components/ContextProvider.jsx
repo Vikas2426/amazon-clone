@@ -14,7 +14,7 @@ Increase the quantity of the item
     let found = false;
     const itemsCopy = [...items];
     for (const item of itemsCopy) {
-      if (item.imgUrl === newItem.imgUrl) {
+      if (item.id === newItem.id) {
         newItem.quantity++;
         found = true;
       }
@@ -33,7 +33,7 @@ Reduce the quantity of the item
   function reduceQuantity(currItem) {
     const newItems = [...items];
     for (let i = 0; i < newItems.length; i++) {
-      if (newItems[i].imgUrl === currItem.imgUrl) {
+      if (newItems[i].id === currItem.id) {
         setItemCount((prev) => prev - 1);
         newItems[i].quantity--;
         if (newItems[i].quantity === 0) {
@@ -50,7 +50,7 @@ Remove entire item from cart
   function removeItem(item) {
     const newItems = [...items];
     for (let i = 0; i < newItems.length; i++) {
-      if (newItems[i].imgUrl === item.imgUrl) {
+      if (newItems[i].id === item.id) {
         setItemCount((prev) => prev - item.quantity);
         newItems.splice(i, 1);
         item.quantity = 0;

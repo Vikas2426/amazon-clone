@@ -4,13 +4,16 @@ import AddToCart from "../AddToCart";
 
 function CartItem({ item }) {
   const { removeItem } = useContext(cartContext);
-
+  const { title, description, price, quantity, image } = item;
   return (
     <>
-      <img src={item.imgUrl} alt="item" className="cart-item-img" />
+      <img src={image} alt="item" className="cart-item-img" />
       <div className="cart-item-details">
-        <h3>{item.name}</h3>
-        <p className="cart-item-price">${item.price}</p>
+        <strong>{title}</strong>
+        <div className="item-description">{description}</div>
+        <p className="cart-item-price">
+          {`$${price} x ${quantity} = $${price * quantity}`}
+        </p>
         <AddToCart item={item} />
         <button className="remove-item-btn" onClick={() => removeItem(item)}>
           Remove

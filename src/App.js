@@ -7,6 +7,7 @@ import ContextProvider from "./components/ContextProvider.jsx";
 import Products from "./components/Products";
 import Protected from "./components/Protected";
 import Orders from "./components/Orders";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/cart" element={<Protected><Cart /></Protected>} />
               <Route path="/login" element={<Login />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/products/:id" element={<ProductDetail />} />
             </Routes>
           </div>
         </Router>

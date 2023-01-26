@@ -1,8 +1,9 @@
- 
-  .deal-price {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0px;
-  }
+.deal-price {
+  align-self: flex-start;
+  margin: 10px;
+}
+
+.deal-img {
+  height: 200px;
+  width: 150px;
+}
